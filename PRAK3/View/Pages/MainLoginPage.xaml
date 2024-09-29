@@ -1,0 +1,100 @@
+﻿<Window x:Class="PRAK3.View.Pages.MainLoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PRAK3.View.Pages"
+        mc:Ignorable="d"
+        Title="MainLoginPage" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="White"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Height="200"
+                Width="300"
+                CornerRadius="25"
+                Effect="{StaticResource MaterialDesignElevationShadow16}">
+            <Grid>
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Person"
+                                                 Margin="0 15 3 0"
+                                                 Foreground="Gray"/>
+                        <TextBox Width="120"
+                                 x:Name="TbLogin"
+                                 Foreground="Gray"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.Hint="Логин"
+                                 materialDesign:HintAssist.Foreground="Black"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 materialDesign:TextFieldAssist.UnderlineBrush="Gray"/>
+                    </StackPanel>
+
+                    
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0 5 0 0">
+                            <materialDesign:PackIcon Kind="Key"
+                                  Margin="0 15 3 0"
+                                  Foreground="Gray"/>
+                            <TextBox Width="120"
+                  x:Name="PbPassword"
+                  Foreground="Gray"
+                  materialDesign:TextFieldAssist.HasClearButton="True"
+                  materialDesign:HintAssist.Hint="Логин"
+                  materialDesign:HintAssist.Foreground="Black"
+                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                  materialDesign:TextFieldAssist.UnderlineBrush="Gray"/>
+                        </StackPanel>
+                    <Button Margin="0 20 0 0"
+                            Background="Transparent"
+                            Foreground="Gray"
+                            BorderBrush="Gray"
+                            x:Name="BtnLogin"
+                            Click="BtnLogin_Click"
+                            Style="{StaticResource MaterialDesignRaisedButton}"
+                            materialDesign:ButtonProgressAssist.IndicatorForeground="Gray"
+                            materialDesign:ButtonProgressAssist.IndicatorBackground="Transparent"
+                            materialDesign:ButtonProgressAssist.Value="-1"
+                            materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                            materialDesign:ButtonProgressAssist.IsIndeterminate="True">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="LoginVariant"
+                                                     Margin="0 2 3 0"/>
+                            <TextBlock Text="Войти"/>
+                        </StackPanel>
+                    </Button>
+
+                    </StackPanel>
+            </Grid>
+        </Border>
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0 0 0 100">
+            <TextBlock Text="ИЛИ"
+                       FontSize="15"
+                       Foreground="LightGray"
+                       TextAlignment="Center"/>
+            <Button Background="Transparent"
+                    Foreground="White"
+                    BorderBrush="Transparent"
+                    x:Name="BtnRegistration"
+                    Click="BtnRegistration_Click">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Register"
+                                             Margin="0 2 3 0"/>
+                    <TextBlock Text="Пройти регистрацию"
+                               TextDecorations="Underline"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+                    
+    </Grid>
+</Window>
